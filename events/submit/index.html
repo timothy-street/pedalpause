@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit an event | Pedal &amp; Pause</title>
+<meta name="description" content="Tell Pedal &amp; Pause about a ride, market or festival near the Pinellas Trail.">
+<link rel="canonical" href="https://pedalpause.com/events/submit/">
+<meta property="og:title" content="Submit an event">
+<meta property="og:description" content="Tell Pedal &amp; Pause about a ride, market or festival near the Pinellas Trail.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pedalpause.com/events/submit/">
+<meta property="og:site_name" content="Pedal &amp; Pause">
+<meta name="theme-color" content="#fbf8f2">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Pedal &amp; Pause home">
+      <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="22" fill="#fbe1d2"/>
+  <circle cx="24" cy="24" r="14" fill="none" stroke="#0f5c63" stroke-width="3"/>
+  <g stroke="#0f5c63" stroke-width="1.6" stroke-linecap="round">
+    <line x1="24" y1="10" x2="24" y2="38"/><line x1="10" y1="24" x2="38" y2="24"/>
+    <line x1="14.1" y1="14.1" x2="33.9" y2="33.9"/><line x1="33.9" y1="14.1" x2="14.1" y2="33.9"/>
+  </g>
+  <circle cx="24" cy="24" r="4.5" fill="#d9623b"/>
+</svg>
+      <span class="brand-name">Pedal <span class="amp">&amp;</span> Pause</span>
+    </a>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+      <li><a href="/trails/">Trails</a></li>
+      <li><a href="/ride-smart/">Ride Smart</a></li>
+      <li><a href="/events/" aria-current="page">Events</a></li>
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="article-head">
+  <div class="wrap">
+    <div class="crumbs"><a href="/">Home</a> › <a href="/events/">Events</a></div>
+    <h1>Submit an event</h1>
+    <p class="dek">Tell us what's happening near the trail. We'll check it and, if it fits, put it on the calendar, usually within a few days.</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="prose">
+    <p>We're looking for things a rider would want to stop for: group rides, markets, festivals, outdoor concerts, bike shop clinics, club meetups. Right now we're covering the Pinellas Trail between Clearwater and Tarpon Springs.</p>
+    <p>A couple of ground rules. We don't list anything we can't confirm, so please include a link or a way to reach the organizer. And we don't publish your name or email; that's only so we can ask a question if we need to.</p>
+
+    <form class="event-form" id="event-form" action="/api/submit-event" method="post" novalidate>
+      <fieldset>
+        <legend>The event</legend>
+        <label for="f-title">Event name <span class="req">required</span></label>
+        <input id="f-title" name="title" required maxlength="120" autocomplete="off">
+
+        <div class="form-row">
+          <div>
+            <label for="f-date">Date <span class="req">required</span></label>
+            <input id="f-date" name="date" type="date" required>
+          </div>
+          <div>
+            <label for="f-start">Starts</label>
+            <input id="f-start" name="start" type="time">
+          </div>
+          <div>
+            <label for="f-end">Ends</label>
+            <input id="f-end" name="end" type="time">
+          </div>
+        </div>
+
+        <label for="f-repeat">Does it repeat?</label>
+        <select id="f-repeat" name="repeat">
+          <option value="">No, it's a one-time event</option>
+          <option value="weekly">Every week</option>
+          <option value="monthly">Once a month</option>
+          <option value="other">Some other schedule (explain below)</option>
+        </select>
+
+        <label for="f-town">Town <span class="req">required</span></label>
+        <select id="f-town" name="town" required><option value="">Choose one</option><option>Clearwater</option><option>Dunedin</option><option>Palm Harbor</option><option>Tarpon Springs</option><option>Somewhere else on the trail</option></select>
+
+        <label for="f-where">Where exactly? <span class="req">required</span></label>
+        <input id="f-where" name="where" required maxlength="200" placeholder="Park, business or street address">
+
+        <label for="f-cost">Cost</label>
+        <input id="f-cost" name="cost" maxlength="80" placeholder="Free, $10, donation...">
+
+        <label for="f-link">Link to the event or organizer <span class="req">required</span></label>
+        <input id="f-link" name="link" type="url" required maxlength="300" placeholder="https://">
+
+        <label for="f-about">Tell us about it</label>
+        <textarea id="f-about" name="about" rows="5" maxlength="1500" placeholder="What happens, who it's for, anything a rider should know: bike parking, how far it is from the trail, restrooms."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>You</legend>
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="name" maxlength="80" autocomplete="name">
+
+        <label for="f-email">Your email <span class="req">required</span></label>
+        <input id="f-email" name="email" type="email" required maxlength="120" autocomplete="email">
+        <p class="hint">Only so we can follow up. Never published, never shared.</p>
+
+        <label class="check"><input type="checkbox" name="organizer" value="yes"> I'm the organizer or I'm helping run it</label>
+
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Leave this empty</label>
+          <input id="f-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+      </fieldset>
+
+      <button class="btn" type="submit">Send it in</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-name">Pedal &amp; Pause</span>
+        <p>Florida trails, honest gear talk and good places to stop, written for riders who've been around long enough to want the whole story.</p>
+      </div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="/trails/">Trail guides</a></li>
+          <li><a href="/ride-smart/">Ride smart</a></li>
+          <li><a href="/events/">Events calendar</a></li>
+          <li><a href="/gear/">Gear &amp; racks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/about/">Who's behind this</a></li>
+          <li><a href="/about/#how-we-work">How we pick what we cover</a></li>
+          <li><a href="/events/submit/">Submit an event</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      &copy; <span id="year">2026</span> Pedal &amp; Pause. Trail conditions and rules change. Check with the managing agency before you ride.
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/submit.js" defer></script>
+</body>
+</html>

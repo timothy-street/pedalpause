@@ -1,0 +1,130 @@
+{
+  "region": "Pinellas Trail: Clearwater to Tarpon Springs",
+  "updated": "2026-10-22",
+  "events": [
+    {
+      "id": "palm-harbor-market-2026-10-30",
+      "title": "Downtown Community Market, Halloween edition",
+      "town": "Palm Harbor",
+      "type": "Market",
+      "start": "2026-10-30T16:00",
+      "end": "2026-10-30T20:00",
+      "venue": "Pop Stansell Park",
+      "address": "797 Florida Ave, Palm Harbor, FL",
+      "cost": "Free",
+      "summary": "Evening market in downtown Palm Harbor, moved from Oct. 17 because of weather. Costume contests start at 6 p.m.",
+      "link": "https://palmharborhappenings.com/events/downtown-community-market-palm-harbor-8/",
+      "checked": "2026-10-22"
+    },
+    {
+      "id": "tarpon-first-friday",
+      "title": "Tarpon Springs First Friday",
+      "town": "Tarpon Springs",
+      "type": "Street party",
+      "dates": [
+        {
+          "start": "2026-11-06T18:00",
+          "end": "2026-11-06T22:00"
+        },
+        {
+          "start": "2026-12-04T18:00",
+          "end": "2026-12-04T22:00"
+        }
+      ],
+      "venue": "Downtown Tarpon Springs",
+      "address": "324 E Pine St, Tarpon Springs, FL",
+      "cost": "Free",
+      "summary": "Monthly evening gathering in the historic downtown on the first Friday of the month.",
+      "link": "https://www.visitstpeteclearwater.com/event/tarpon-springs-first-friday/2121",
+      "checked": "2026-10-22"
+    },
+    {
+      "id": "tarpon-seafood-festival-2026",
+      "title": "Tarpon Springs Seafood Festival",
+      "town": "Tarpon Springs",
+      "type": "Festival",
+      "dates": [
+        {
+          "start": "2026-11-07T10:00",
+          "end": "2026-11-07T21:00"
+        },
+        {
+          "start": "2026-11-08T10:00",
+          "end": "2026-11-08T17:00"
+        }
+      ],
+      "venue": "Tarpon Springs Sponge Docks",
+      "address": "Dodecanese Blvd & Hill St, Tarpon Springs, FL",
+      "cost": "Check the organizer's site",
+      "summary": "Two-day seafood, arts and crafts festival at the Sponge Docks. Saturday runs late; Sunday wraps up at 5.",
+      "link": "https://sikpromotions.com/applicants/fall/tarpon-springs-seafood-festival",
+      "checked": "2026-10-22"
+    },
+    {
+      "id": "wine-around-palm-harbor-2026",
+      "title": "Wine Around Palm Harbor",
+      "town": "Palm Harbor",
+      "type": "Food & drink",
+      "start": "2026-11-07T16:00",
+      "end": "2026-11-07T19:00",
+      "venue": "Palm Harbor Museum",
+      "address": "2043 Curlew Rd, Palm Harbor, FL",
+      "cost": "$45",
+      "summary": "Outdoor wine and food tasting on the museum grounds, with a table for each of seven historic local communities. Benefits the museum.",
+      "link": "https://www.palmharbormuseum.com/wine-around-palm-harbor.html",
+      "checked": "2026-10-22"
+    },
+    {
+      "id": "dunedin-celtic-festival-2026",
+      "title": "Dunedin Celtic Festival",
+      "town": "Dunedin",
+      "type": "Festival",
+      "start": "2026-11-21T11:00",
+      "end": "2026-11-21T19:00",
+      "venue": "Highlander Park",
+      "address": "903 Michigan Blvd, Dunedin, FL",
+      "cost": "$20 in advance, $27 at the gate; 12 and under free",
+      "summary": "Dunedin's Scottish heritage on display: music, food and a whisky tasting add-on. Put on by the Dunedin Scottish Arts Foundation.",
+      "link": "https://www.dunedinsafoundation.com/",
+      "checked": "2026-10-22"
+    },
+    {
+      "id": "palm-harbor-market-saturdays",
+      "title": "Downtown Community Market",
+      "town": "Palm Harbor",
+      "type": "Market",
+      "dates": [
+        {
+          "start": "2026-11-21T10:00",
+          "end": "2026-11-21T15:00"
+        },
+        {
+          "start": "2026-12-19T10:00",
+          "end": "2026-12-19T15:00"
+        }
+      ],
+      "venue": "Pop Stansell Park",
+      "address": "797 Florida Ave, Palm Harbor, FL",
+      "cost": "Free",
+      "summary": "Daytime community market in downtown Palm Harbor.",
+      "link": "https://palmharborhappenings.com/events/",
+      "checked": "2026-10-22"
+    },
+    {
+      "id": "dunedin-downtown-market-saturdays",
+      "title": "Dunedin Downtown Market",
+      "town": "Dunedin",
+      "type": "Market",
+      "start": "2026-11-07T09:00",
+      "end": "2026-11-07T14:00",
+      "repeat": "weekly",
+      "until": "2027-06-26",
+      "venue": "John L. Lawrence Pioneer Park",
+      "address": "Main St, Dunedin, FL",
+      "cost": "Free",
+      "summary": "Saturday market in downtown Dunedin. From November through June it sets up in Pioneer Park on Main Street.",
+      "link": "https://www.visitstpeteclearwater.com/event/dunedin-downtown-market-saturdays/54881",
+      "checked": "2026-10-22"
+    }
+  ]
+}
