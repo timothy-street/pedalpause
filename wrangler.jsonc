@@ -15,14 +15,14 @@
   "keep_vars": true,
 
   // Branch builds run `wrangler preview`, which needs this block (it can stay empty).
-  "previews": {}
+  "previews": {},
 
   // KV storage. Deploys replace dashboard bindings with what's listed here, so every KV
-  // namespace the site uses must be listed. Remove the // in front of a block and paste the
-  // namespace ID from Storage & Databases > KV once you've created it (see README).
-  //
-  // ,"kv_namespaces": [
-  //   { "binding": "EVENT_SUBMISSIONS", "id": "PASTE-ID-HERE" },
-  //   { "binding": "RULES_CHAT_LIMITS", "id": "PASTE-ID-HERE" }
-  // ]
+  // namespace the site uses must be listed here (see README).
+  "kv_namespaces": [
+    // Event submissions waiting for review (Storage & Databases > KV > pedalpause-event-submissions)
+    { "binding": "EVENT_SUBMISSIONS", "id": "adca1c9a1e5b4fefb43db5355753098e" },
+    // Question-box limits: 15 per visitor per hour, 300 per day (pedalpause-rules-chat)
+    { "binding": "RULES_CHAT_LIMITS", "id": "b192c811f642408ab89a3ef01752f110" }
+  ]
 }
