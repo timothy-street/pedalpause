@@ -1,0 +1,25 @@
+// Cloudflare Worker settings for pedalpause.com.
+// Workers Builds reads this file on every push to main.
+{
+  "name": "pedalpause",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    // Only the form endpoints run code; every page and image is served straight from the files.
+    "run_worker_first": ["/api/*"],
+    "not_found_handling": "404-page"
+  },
+  // Keep any plain-text variables set in the Cloudflare dashboard (secrets are always kept).
+  "keep_vars": true
+
+  // KV storage. Deploys replace dashboard bindings with what's listed here, so every KV
+  // namespace the site uses must be listed. Remove the // in front of a block and paste the
+  // namespace ID from Storage & Databases > KV once you've created it (see README).
+  //
+  // ,"kv_namespaces": [
+  //   { "binding": "EVENT_SUBMISSIONS", "id": "PASTE-ID-HERE" },
+  //   { "binding": "RULES_CHAT_LIMITS", "id": "PASTE-ID-HERE" }
+  // ]
+}
