@@ -97,23 +97,59 @@ How to answer:
 - If the rule differs by stretch of trail, name the stretch.
 - If the facts you used have status "reported", say the answer is based on news reports and suggest confirming with the agency or posted signs.
 - Posted signs always win. Mention that when the question is about speed or where to ride.
-- Do not include links, phone numbers, or dates in "answer"; the website adds those from the data.
-- Questions unrelated to e-bike or trail rules: set "covered" to false and say this box only answers Pinellas Trail e-bike rule questions.
+- Do not include links, phone numbers, or dates in the answer; the website adds those from the data.
+- Questions unrelated to e-bike or trail rules: set covered to false and say this box only answers Pinellas Trail e-bike rule questions.
 - This is not legal advice. Don't give legal opinions about a specific ticket, crash or dispute; say to talk to a lawyer or the agency.
 
-Reply with ONLY a JSON object, no other text:
-{"covered": true|false, "answer": "...", "topic_ids": ["..."], "segment_ids": ["..."], "source_ids": ["..."], "agency_ids": ["..."]}
-List only ids that appear in the data and that you actually used.
+Always reply by calling the give_answer tool. In its id lists, include only ids that appear in the data and that you actually used.
 
 RULES DATA:
 ${JSON.stringify(facts)}`;
 }
 
+// The model must answer through this tool, so the reply always arrives as a ready-made
+// object instead of text we'd have to pick apart.
+const ANSWER_TOOL = {
+  name: 'give_answer',
+  description: 'Give the rider your answer, plus the ids of the rules data you used.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      covered: { type: 'boolean', description: 'false if the rules data does not answer the question' },
+      answer: { type: 'string', description: 'Plain-language answer, 2 to 6 sentences, no links, phone numbers or dates' },
+      topic_ids: { type: 'array', items: { type: 'string' } },
+      segment_ids: { type: 'array', items: { type: 'string' } },
+      source_ids: { type: 'array', items: { type: 'string' } },
+      agency_ids: { type: 'array', items: { type: 'string' } },
+    },
+    required: ['covered', 'answer', 'topic_ids', 'segment_ids', 'source_ids', 'agency_ids'],
+  },
+};
+
+// Older text-style replies still work, in case a model ignores the tool.
 function parseModelJson(text) {
   const start = text.indexOf('{');
   const end = text.lastIndexOf('}');
   if (start < 0 || end <= start) return null;
   try { return JSON.parse(text.slice(start, end + 1)); } catch { return null; }
+}
+
+// If the model fails but the rider picked a stretch, show that stretch's rules word for word.
+function stretchFallback(rules, segment) {
+  return {
+    ok: true,
+    covered: true,
+    fallback: true,
+    answer: `We couldn't write a custom answer just now, so here are the rules for ${segment.name}.\n\n` +
+      `Speed: ${segment.speed}\nE-bike classes: ${segment.classes}\nSidewalks: ${segment.sidewalks}\nHelmets: ${segment.helmet}` +
+      (segment.notes ? `\n\n${segment.notes}` : ''),
+    reported: segment.status === 'reported',
+    last_verified: segment.last_verified,
+    sources: segment.sources.map((id) => ({ title: `${rules.sources[id].publisher}: ${rules.sources[id].title}`, url: rules.sources[id].url, kind: rules.sources[id].kind })),
+    agencies: segment.managed_by.map((id) => ({ name: rules.agencies[id].name, phone: rules.agencies[id].phone, url: rules.agencies[id].url })),
+    links: [{ label: segment.name, href: `${PAGE_PATH}#seg-${segment.id}` }],
+    disclaimer: rules.disclaimer,
+  };
 }
 
 export async function onRequestPost({ request, env }) {
@@ -158,20 +194,32 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         model: env.RULES_MODEL || DEFAULT_MODEL,
-        max_tokens: 500,
+        max_tokens: 1500,
         system: buildSystemPrompt(rules),
+        tools: [ANSWER_TOOL],
+        tool_choice: { type: 'tool', name: 'give_answer' },
         messages: [{ role: 'user', content: userText }],
       }),
     });
-    if (!res.ok) throw new Error(`model error ${res.status}`);
+    if (!res.ok) {
+      const detail = await res.text().catch(() => '');
+      throw new Error(`model error ${res.status} ${detail.slice(0, 300)}`);
+    }
     const out = await res.json();
-    const text = (out.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
-    parsed = parseModelJson(text);
+    const tool = (out.content || []).find((c) => c.type === 'tool_use' && c.name === 'give_answer');
+    if (tool && tool.input) {
+      parsed = tool.input;
+    } else {
+      const text = (out.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
+      parsed = parseModelJson(text);
+    }
+    if (!parsed) console.log('ask-rules unreadable reply, stop_reason:', out.stop_reason);
   } catch (err) {
     console.log('ask-rules model call failed:', err && err.message);
   }
 
   if (!parsed || typeof parsed.answer !== 'string' || !parsed.answer.trim()) {
+    if (segment) return reply(200, stretchFallback(rules, segment));
     return reply(502, fallback(rules, 'We couldn\'t get an answer just now.'));
   }
 
