@@ -5,3 +5,6 @@
 
 /assets/*
   Cache-Control: public, max-age=604800
+
+/ride-smart/pinellas-trail-ebike-rules/rules.json
+  Cache-Control: public, max-age=300
