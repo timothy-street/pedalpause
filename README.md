@@ -29,7 +29,13 @@ This is a plain static website: HTML, one stylesheet, one small script. There is
 | `sitemap.xml`, `robots.txt` | For search engines |
 | `_headers` | Security and caching settings Cloudflare reads |
 
-## Connecting Cloudflare (one time, all in the browser)
+## How the site runs on Cloudflare
+
+The site deploys as a Cloudflare **Worker** through Workers Builds: every push to `main` builds and publishes automatically. `wrangler.jsonc` holds the settings. `worker.js` sends the two form endpoints (`/api/submit-event` and `/api/ask-rules`) to their code in `functions/api/` and serves everything else as plain files. `.assetsignore` keeps the code, scripts and this README from being published as web pages.
+
+**Bindings live in `wrangler.jsonc`.** Each deploy replaces dashboard KV bindings with what that file lists, so a KV namespace added only in the dashboard will disappear on the next push. Add KV namespaces to the file instead (see below). Secrets set in the dashboard are always kept.
+
+## Connecting Cloudflare (original Pages setup, kept for reference)
 
 1. Log in at **dash.cloudflare.com**.
 2. In the left menu, open **Workers & Pages**, then click **Create**.
@@ -65,9 +71,9 @@ Past events drop off the page on their own. Save, commit, and Cloudflare publish
 The form saves submissions to a Cloudflare KV store for you to review. Nothing goes on the site until you add it to `events.json`.
 
 1. In Cloudflare, go to **Storage & Databases > KV** and create a namespace called `pedalpause-event-submissions`.
-2. Open **Workers & Pages > pedalpause > Settings > Bindings**, click **Add**, choose **KV namespace**.
-3. Variable name: `EVENT_SUBMISSIONS`. Pick the namespace you just made. Save, for both Production and Preview.
-4. Redeploy (or push any change).
+2. Copy the namespace's **ID**.
+3. In `wrangler.jsonc`, remove the `//` in front of the `kv_namespaces` lines and paste the ID into the `EVENT_SUBMISSIONS` line. Delete any line for a namespace you haven't created yet.
+4. Commit and push. Cloudflare redeploys on its own.
 
 To review submissions, open the namespace in **KV**. Each one is saved under a key starting with `pending:` and the event date. Submissions delete themselves after 120 days.
 
@@ -91,11 +97,11 @@ Check every source at least once a month, and right after any county commission 
 
 Until this is done the page works fine; the box just says it isn't switched on yet and points to the answers on the page.
 
-1. **API key.** Create a key at console.anthropic.com and set a monthly spending limit there (a few dollars is plenty to start). In Cloudflare: **Workers & Pages > pedalpause > Settings > Variables and Secrets > Add**, type **Secret**, name `ANTHROPIC_API_KEY`. Do this for Production.
-2. **Limits (recommended).** Create a KV namespace called `pedalpause-rules-chat`, then add it under **Settings > Bindings > KV namespace** with the variable name `RULES_CHAT_LIMITS`. This caps each visitor at 15 questions an hour and the whole site at 300 a day. Change the daily cap with a variable named `RULES_DAILY_CAP`.
+1. **API key.** Create a key at console.anthropic.com and set a monthly spending limit there (a few dollars is plenty to start). In Cloudflare: **Workers & Pages > pedalpause > Settings > Variables and Secrets > Add**, type **Secret**, name `ANTHROPIC_API_KEY`.
+2. **Limits (recommended).** Create a KV namespace called `pedalpause-rules-chat`, copy its ID, and paste it into the `RULES_CHAT_LIMITS` line in `wrangler.jsonc` (same steps as the event namespace above). This caps each visitor at 15 questions an hour and the whole site at 300 a day. Change the daily cap with a variable named `RULES_DAILY_CAP`.
 3. **Bot check (recommended).** In Cloudflare, open **Turnstile**, add a widget for `pedalpause.com`, and copy the two keys:
    - Put the **site key** in `rules.json` under `"chat": { "turnstile_site_key": "..." }`, then rebuild the page.
    - Add the **secret key** as a Secret named `TURNSTILE_SECRET`.
-4. Redeploy (or push any change).
+4. Push any change so Cloudflare redeploys.
 
 The question box never makes up a source: the model only picks which rules it used, and the links, dates and phone numbers are filled in from `rules.json`. It does not store questions.
