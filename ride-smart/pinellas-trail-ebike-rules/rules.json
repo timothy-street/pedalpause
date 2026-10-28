@@ -1,0 +1,408 @@
+{
+  "_readme": "The one source of truth for Pinellas Trail e-bike rules. The FAQ page (index.html in this folder) is generated from this file by scripts/build-rules-page.mjs, and the chat box answers only from this file. Edit here, run the script, commit both. Every rule needs at least one source id and a last_verified date. Use status 'confirmed' only when an official government page says it; use 'reported' when only news coverage says it.",
+  "updated": "2026-10-28",
+  "area": "Pinellas Trail (Fred Marquis Pinellas Trail), St. Petersburg to Tarpon Springs",
+  "disclaimer": "This is a plain-language summary, not legal advice. Rules change, sometimes without much notice. Check with the agency that manages the stretch you're riding, and obey any posted signs, before you ride.",
+  "not_covered": [
+    "The Duke Energy Trail and the eastern half of the Pinellas Trail Loop",
+    "Beaches and the beach towns",
+    "Trails outside Pinellas County, such as the Suncoast Trail or the Withlacoochee State Trail",
+    "Electric scooters, e-motos and other devices that aren't legal e-bikes, except to explain why they aren't allowed"
+  ],
+  "chat": {
+    "turnstile_site_key": ""
+  },
+  "agencies": {
+    "county_parks": {
+      "name": "Pinellas County Parks & Conservation Resources",
+      "role": "Manages and maintains the Pinellas Trail",
+      "phone": "(727) 582-2100, option 2",
+      "url": "https://pinellas.gov/pinellas-county-trail-guide/"
+    },
+    "pcso": {
+      "name": "Pinellas County Sheriff's Office",
+      "role": "Enforces trail rules; city police also enforce inside their city limits",
+      "phone": "",
+      "url": "https://www.dunedin.gov/Your-Government/Learn-and-Engage/Dunedin-insights/City-Information-Resources/E-Bikes-on-the-Pinellas-Trail-What-You-Need-to-Know"
+    },
+    "county_info": {
+      "name": "Pinellas County Information Desk",
+      "role": "General county questions, weekdays 8 a.m. to 5 p.m.",
+      "phone": "(727) 464-3000",
+      "url": "https://pinellas.gov/bicycle-lanes-sidewalks-and-trails/"
+    },
+    "st_pete": {
+      "name": "City of St. Petersburg",
+      "role": "City streets, sidewalks and the North Bay Trail",
+      "phone": "(727) 893-7111",
+      "url": "https://www.stpete.org/residents/parks___recreation/cycling_walking_trails.php"
+    },
+    "tarpon_springs": {
+      "name": "City of Tarpon Springs",
+      "role": "Downtown and Sponge Docks sidewalks",
+      "phone": "",
+      "url": ""
+    }
+  },
+  "sources": {
+    "county_trail_guide": {
+      "title": "Pinellas Trail Guide",
+      "publisher": "Pinellas County",
+      "url": "https://pinellas.gov/pinellas-county-trail-guide/",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "county_courtesy": {
+      "title": "Pinellas Trail Courtesy",
+      "publisher": "Pinellas County",
+      "url": "https://pinellas.gov/pinellas-trail-courtesy/",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "pcso_dunedin": {
+      "title": "E-Bikes on the Pinellas Trail: What You Need to Know (contributed by the Pinellas County Sheriff's Office, March 25, 2026)",
+      "publisher": "City of Dunedin",
+      "url": "https://www.dunedin.gov/Your-Government/Learn-and-Engage/Dunedin-insights/City-Information-Resources/E-Bikes-on-the-Pinellas-Trail-What-You-Need-to-Know",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "fs_316_20655": {
+      "title": "Florida Statutes § 316.20655, Electric bicycle regulations",
+      "publisher": "The Florida Senate",
+      "url": "https://flsenate.gov/Laws/Statutes/2025/316.20655",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "fs_316_2065": {
+      "title": "Florida Statutes § 316.2065, Bicycle regulations",
+      "publisher": "The Florida Senate",
+      "url": "https://flsenate.gov/Laws/Statutes/2025/0316.2065",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "fs_316_008": {
+      "title": "Florida Statutes § 316.008, Powers of local authorities",
+      "publisher": "The Florida Senate",
+      "url": "https://flsenate.gov/Laws/Statutes/2025/316.008",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "stpete_trails": {
+      "title": "Cycling & Walking Trails",
+      "publisher": "City of St. Petersburg",
+      "url": "https://www.stpete.org/residents/parks___recreation/cycling_walking_trails.php",
+      "kind": "official",
+      "checked": "2026-10-28"
+    },
+    "beacons_sep2": {
+      "title": "Pinellas has few rules for e-bikes. Could that soon change? (Sept. 2, 2026)",
+      "publisher": "Tampa Bay Beacons",
+      "url": "https://www.tampabaybeacons.com/2026/09/02/pinellas-has-few-rules-for-e-bikes-could-that-soon-change/",
+      "kind": "news",
+      "checked": "2026-10-28"
+    },
+    "beacons_oct16": {
+      "title": "Pinellas to wait on Tallahassee before writing e-bike rules (Oct. 2026)",
+      "publisher": "Tampa Bay Beacons",
+      "url": "https://www.tampabaybeacons.com/2026/10/16/pinellas-to-wait-on-tallahassee-before-writing-e-bike-rules/",
+      "kind": "news",
+      "checked": "2026-10-28"
+    },
+    "wusf_aug22": {
+      "title": "Pinellas County commissioners explore local e-bike regulations (Aug. 22, 2026)",
+      "publisher": "WUSF",
+      "url": "https://wusf.org/text/politics-issues/2026-08-22/pinellas-county-commissioners-explore-local-e-bike-regulations",
+      "kind": "news",
+      "checked": "2026-10-28"
+    },
+    "beacons_tarpon": {
+      "title": "Tarpon Springs bans e-bikes from sidewalks in tourist areas (Sept. 4, 2026)",
+      "publisher": "Tampa Bay Beacons",
+      "url": "https://www.tampabaybeacons.com/2026/09/04/tarpon-springs-bans-e-bikes-from-sidewalks-in-tourist-areas/",
+      "kind": "news",
+      "checked": "2026-10-28"
+    },
+    "bn9_tarpon": {
+      "title": "Tarpon Springs restricts e-bikes, bikes and scooters on sidewalks in some areas (Sept. 16, 2026)",
+      "publisher": "Bay News 9",
+      "url": "https://baynews9.com/fl/tampa/news/2026/09/16/tarpon-springs-restricts-e-bikes-bikes-and-scooters-on-sidewalks-in-some-areas",
+      "kind": "news",
+      "checked": "2026-10-28"
+    },
+    "rambler_pinellas": {
+      "title": "Pinellas Trail: Treasured bike trail from St. Pete north",
+      "publisher": "Florida Rambler",
+      "url": "https://www.floridarambler.com/florida-bike-hike-trails/pinellas-trail/",
+      "kind": "guide",
+      "checked": "2026-10-28"
+    }
+  },
+  "topics": [
+    {
+      "id": "speed",
+      "question": "What is the speed limit on the Pinellas Trail?",
+      "answer": "20 mph, according to the Pinellas County Sheriff's Office. The county's own trail rules say riders must obey the posted speed limit, so if a sign on your stretch shows something lower, the sign is the rule. That 20 mph applies to every e-bike class, including Class 3 bikes that can assist up to 28 mph.",
+      "sources": [
+        "pcso_dunedin",
+        "county_trail_guide"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "classes",
+      "question": "Which e-bike classes are allowed on the Pinellas Trail?",
+      "answer": "All three. The county's trail guide treats Class 1 (pedal assist to 20 mph), Class 2 (throttle to 20 mph) and Class 3 (pedal assist to 28 mph) as bicycles, and the trail's ban on motorized vehicles makes an exception for e-bikes. A Class 3 is legal on the trail, but you can't use its top speed range because the trail limit is 20 mph.",
+      "sources": [
+        "county_trail_guide",
+        "pcso_dunedin"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "throttle",
+      "question": "Can I use a throttle (Class 2) e-bike on the trail?",
+      "answer": "Yes. The county's trail guide lists Class 2, throttle-on-demand bikes that cut off at 20 mph, among the e-bikes treated as bicycles on the trail.",
+      "sources": [
+        "county_trail_guide"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "not_an_ebike",
+      "question": "What makes a bike too powerful for the trail?",
+      "answer": "Under Florida law an e-bike has working pedals, a seat, two or three wheels and a motor of 750 watts or less. The Sheriff's Office says a legal e-bike tops out at 28 mph under power and has no illegal modifications. A bike that fails any of those tests is treated as a motor vehicle that needs registration and a licensed driver, and it isn't allowed on the trail. If your bike has been 'unlocked' or had its controller swapped, it may no longer qualify.",
+      "sources": [
+        "fs_316_20655",
+        "pcso_dunedin"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "trikes",
+      "question": "Are electric trikes allowed on the Pinellas Trail?",
+      "answer": "A three-wheeled e-trike that meets the rest of Florida's e-bike definition (working pedals, a seat, a motor of 750 watts or less) is an e-bike under state law, so the same trail rules apply to it. Keep in mind the county asks riders not to take up more than half the trail.",
+      "sources": [
+        "fs_316_20655",
+        "county_trail_guide"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "sidewalk",
+      "question": "Can I ride my e-bike on the sidewalk in Pinellas County?",
+      "answer": "Usually, but not everywhere. Florida law lets you ride a bicycle, including an e-bike, on a sidewalk, where you have the rights and duties of a pedestrian: you must yield to people on foot and give an audible warning before passing them. Cities and counties can restrict e-bikes on sidewalks, and any ordinance that allows them must cap speeds at 15 mph. Pinellas County has not adopted a countywide sidewalk rule. St. Petersburg allows bikes on sidewalks except where signs say otherwise. Tarpon Springs now requires you to walk any bike through its busiest downtown sidewalks. When you leave the trail, watch for signs.",
+      "sources": [
+        "fs_316_2065",
+        "fs_316_008",
+        "beacons_oct16",
+        "stpete_trails",
+        "bn9_tarpon"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28",
+      "status_note": "The state-law and St. Petersburg parts come from official pages. The county's decision and the Tarpon Springs rule come from news reports."
+    },
+    {
+      "id": "trail_vs_sidewalk",
+      "question": "Are the rules different on the trail than on a sidewalk?",
+      "answer": "Yes. On the trail, the county's rules apply: 20 mph, keep right, pass on the left and warn before passing. On a sidewalk, state law treats you like a pedestrian, so people on foot always have the right of way and any local speed cap can't be more than 15 mph. Some city sidewalks, like parts of downtown Tarpon Springs, are walk-your-bike zones.",
+      "sources": [
+        "county_trail_guide",
+        "pcso_dunedin",
+        "fs_316_2065",
+        "fs_316_008",
+        "bn9_tarpon"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28",
+      "status_note": "The Tarpon Springs walk-zone detail comes from news reports."
+    },
+    {
+      "id": "helmet",
+      "question": "Do I have to wear a helmet on the Pinellas Trail?",
+      "answer": "Only riders and passengers under 16 are required to wear one, under Florida law and the county's trail rules. Adults aren't required to, though it's a good idea.",
+      "sources": [
+        "fs_316_2065",
+        "county_trail_guide"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "license_id",
+      "question": "Do I need a license, registration or ID to ride an e-bike?",
+      "answer": "No license, registration or insurance is needed for a legal e-bike in Florida. Since 2025, state law has allowed local governments to require riders to carry a government-issued photo ID. Pinellas County has not adopted that rule. Local news has reported that some Pinellas cities have adopted restrictions allowed under the law, without naming them, so carrying your driver's license is a cheap safeguard.",
+      "sources": [
+        "fs_316_20655",
+        "beacons_oct16"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28",
+      "status_note": "The state-law part comes from the statute. What Pinellas cities have adopted comes from news reports."
+    },
+    {
+      "id": "age",
+      "question": "Is there a minimum age to ride an e-bike on the trail?",
+      "answer": "Not on the Pinellas Trail as of our last check. State law lets local governments set minimum ages, and county commissioners discussed it in 2026, but the county decided in October 2026 to wait for the Legislature before writing any new e-bike rules.",
+      "sources": [
+        "fs_316_20655",
+        "wusf_aug22",
+        "beacons_oct16"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28",
+      "status_note": "The state-law part comes from the statute. The county's October 2026 decision comes from news reports."
+    },
+    {
+      "id": "hours",
+      "question": "What are the Pinellas Trail's hours? Can I ride after dark?",
+      "answer": "The county lists the trail as open daily from 7 a.m. to sunset. Anywhere you ride between sunset and sunrise, Florida law requires a white front light visible from 500 feet plus a red rear light and a red reflector.",
+      "sources": [
+        "county_trail_guide",
+        "fs_316_2065"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "etiquette",
+      "question": "What are the basic trail etiquette rules?",
+      "answer": "Keep right and pass on the left. Warn people before you pass, with a bell or by saying 'on your left.' Don't stop or stand on the trail; step off to rest. Groups shouldn't take up more than half the trail, and dogs must be on a leash no longer than 6 feet.",
+      "sources": [
+        "county_trail_guide",
+        "county_courtesy"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "changes",
+      "question": "Are the Pinellas e-bike rules about to change?",
+      "answer": "Possibly, but not right away. Gov. DeSantis vetoed the statewide e-bike safety bill (SB 382) in June 2026. Pinellas County commissioners decided in October 2026 to wait for the 2027 legislative session before writing their own rules, and Forward Pinellas is working with county staff on proposals. St. Petersburg council members have also talked about a city ordinance. We'll update this page when anything is adopted.",
+      "sources": [
+        "beacons_oct16",
+        "beacons_sep2",
+        "wusf_aug22"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28"
+    }
+  ],
+  "segments": [
+    {
+      "id": "st-pete",
+      "name": "Downtown St. Petersburg and the North Bay Trail connection",
+      "where": "The southern trailhead at First Avenue Southeast and Bayshore Drive, where the Pinellas Trail meets the city's North Bay Trail along the waterfront.",
+      "managed_by": [
+        "county_parks",
+        "st_pete"
+      ],
+      "speed": "Pinellas Trail: 20 mph. North Bay Trail (city): St. Petersburg posted 10 mph signs in August 2026 and limited riders to under 15 mph; police have said they're focusing on warnings first.",
+      "classes": "Class 1, 2 and 3 on the Pinellas Trail.",
+      "sidewalks": "St. Petersburg allows bikes on sidewalks except where signs prohibit it. Ride at a walking-friendly pace and yield to pedestrians.",
+      "helmet": "Required under 16.",
+      "notes": "The 10 mph North Bay Trail limit comes from news reports, not a city ordinance we could read. If you're riding the waterfront, go by the posted signs.",
+      "sources": [
+        "county_trail_guide",
+        "pcso_dunedin",
+        "beacons_sep2",
+        "stpete_trails",
+        "rambler_pinellas"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "mid-county",
+      "name": "St. Petersburg to Clearwater (Gulfport, South Pasadena, Seminole, Largo, Belleair, Clearwater)",
+      "where": "The long middle stretch of the trail.",
+      "managed_by": [
+        "county_parks"
+      ],
+      "speed": "20 mph, or lower where posted.",
+      "classes": "Class 1, 2 and 3.",
+      "sidewalks": "No countywide sidewalk restriction. We haven't found a city along this stretch with its own e-bike sidewalk rule; obey any posted signs.",
+      "helmet": "Required under 16.",
+      "notes": "Expect frequent road crossings. Stop at stop signs and don't assume you have the right of way at major roads like State Road 60 in Clearwater.",
+      "sources": [
+        "county_trail_guide",
+        "pcso_dunedin",
+        "county_courtesy",
+        "beacons_oct16"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28",
+      "status_note": "The 'no countywide rule' point comes from news coverage of the county's October 2026 decision."
+    },
+    {
+      "id": "dunedin",
+      "name": "Downtown Dunedin",
+      "where": "The trail runs straight through downtown and serves as its main walkway, with shops and restaurants facing it.",
+      "managed_by": [
+        "county_parks"
+      ],
+      "speed": "20 mph, but downtown is crowded and the county says fast riding is inappropriate in busy areas. Plan on going much slower here.",
+      "classes": "Class 1, 2 and 3.",
+      "sidewalks": "We haven't found a Dunedin rule restricting e-bikes on downtown sidewalks as of our last check.",
+      "helmet": "Required under 16.",
+      "notes": "Slow down or stop where the trail crosses Main Street.",
+      "sources": [
+        "county_trail_guide",
+        "pcso_dunedin",
+        "county_courtesy",
+        "rambler_pinellas"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28"
+    },
+    {
+      "id": "palm-harbor",
+      "name": "Palm Harbor",
+      "where": "The unincorporated stretch between Dunedin and Tarpon Springs.",
+      "managed_by": [
+        "county_parks"
+      ],
+      "speed": "20 mph, or lower where posted.",
+      "classes": "Class 1, 2 and 3.",
+      "sidewalks": "No countywide sidewalk restriction.",
+      "helmet": "Required under 16.",
+      "notes": "Palm Harbor isn't a city, so county rules are the only local rules here.",
+      "sources": [
+        "county_trail_guide",
+        "pcso_dunedin",
+        "beacons_oct16"
+      ],
+      "status": "confirmed",
+      "last_verified": "2026-10-28",
+      "status_note": "The 'no countywide rule' point comes from news coverage of the county's October 2026 decision."
+    },
+    {
+      "id": "tarpon-springs",
+      "name": "Tarpon Springs, including side trips downtown and to the Sponge Docks",
+      "where": "The northern end of the trail, and the short detours riders take into downtown and to the Sponge Docks for lunch.",
+      "managed_by": [
+        "county_parks",
+        "tarpon_springs"
+      ],
+      "speed": "Trail: 20 mph. Off the trail, state law caps speeds on sidewalks at 15 mph where local rules allow e-bikes.",
+      "classes": "Class 1, 2 and 3 on the trail.",
+      "sidewalks": "Walk your bike, any bike, on the sidewalks of East Tarpon Avenue between Pinellas Avenue and Ring Street, Dodecanese Boulevard between Pinellas Avenue and Roosevelt Boulevard, and in Craig Park. The city can add temporary walk zones during big events such as First Friday and Hippie Fest. Fines start with a warning or up to $50, then $100 for a second offense and $250 for a third.",
+      "helmet": "Required under 16.",
+      "notes": "Tarpon Springs passed this rule in September 2026, according to news reports; signs were going up that fall. The rule covers sidewalks, not the Pinellas Trail itself. We couldn't find the ordinance text on the city's website, so check the posted signs or call the city.",
+      "sources": [
+        "county_trail_guide",
+        "bn9_tarpon",
+        "beacons_tarpon",
+        "fs_316_008",
+        "rambler_pinellas"
+      ],
+      "status": "reported",
+      "last_verified": "2026-10-28"
+    }
+  ]
+}

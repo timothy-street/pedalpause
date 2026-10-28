@@ -466,3 +466,38 @@ a:hover { color: var(--coral); }
 .form-status { margin-top: 16px !important; font-weight: 600; }
 .form-status.ok { color: var(--palm); }
 .form-status.error { color: #b2421d; }
+
+/* ---------- Pinellas rules page + question box ---------- */
+.rule-src { font-size: 0.98rem !important; color: var(--ink-soft); margin-top: -0.4em !important; }
+.rule-note { font-style: italic; }
+.rule-badge {
+  display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: .02em;
+  background: var(--coral-soft); color: #8a3418; border-radius: 999px; padding: 1px 10px; margin-left: 4px;
+}
+.segment h3 { font-family: var(--font-head) !important; text-transform: none !important; letter-spacing: 0 !important; color: var(--ink) !important; font-size: 1.3rem !important; }
+.seg-where { color: var(--ink-soft); margin-bottom: 12px !important; }
+.seg-notes { margin: 12px 0 8px !important; }
+.rules-chat {
+  background: var(--card); border: 2px solid var(--teal); border-radius: var(--radius);
+  padding: 20px 22px 24px; margin: 32px 0;
+}
+.rules-chat h2 { margin-top: 0 !important; }
+.rules-chat label { display: block; font-weight: 700; margin: 14px 0 6px; }
+.hint-inline { font-weight: 400; color: var(--ink-soft); }
+.rules-chat select, .rules-chat textarea {
+  width: 100%; min-height: 52px; padding: 10px 14px; border-radius: 10px;
+  border: 2px solid var(--line); background: #fff; color: var(--ink); font: 400 1.1rem var(--font-body);
+}
+.rules-chat textarea { resize: vertical; min-height: 96px; }
+.rules-chat select:focus, .rules-chat textarea:focus { border-color: var(--teal); outline: none; }
+.rc-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+.rc-examples .chip { cursor: pointer; font: 600 1rem var(--font-body); }
+.rules-chat .cf-turnstile { margin: 0 0 14px; }
+.rules-chat button[disabled] { opacity: .6; cursor: wait; }
+.rules-chat-answer:empty { display: none; }
+.rules-chat-answer { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 16px; }
+.rc-q { font-weight: 700; margin-bottom: 6px !important; }
+.rc-a { white-space: pre-line; }
+.rc-meta { font-size: 0.98rem; color: var(--ink-soft); }
+.rc-meta ul { margin: 4px 0 8px !important; }
+.rc-error { color: #b2421d; font-weight: 600; }
