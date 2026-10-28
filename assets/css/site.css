@@ -282,7 +282,7 @@ a:hover { color: var(--coral); }
 .site-footer { background: var(--ink); color: #c9d3d5; padding: 48px 0 32px; font-size: 1rem; }
 .site-footer a { color: #fff; }
 .footer-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
-@media (min-width: 760px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+@media (min-width: 760px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
 .site-footer h4 { color: #fff; margin: 0 0 10px; font-size: 1.05rem; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer li { margin-bottom: 8px; }
