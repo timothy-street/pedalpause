@@ -12,7 +12,10 @@
     "not_found_handling": "404-page"
   },
   // Keep any plain-text variables set in the Cloudflare dashboard (secrets are always kept).
-  "keep_vars": true
+  "keep_vars": true,
+
+  // Branch builds run `wrangler preview`, which needs this block (it can stay empty).
+  "previews": {}
 
   // KV storage. Deploys replace dashboard bindings with what's listed here, so every KV
   // namespace the site uses must be listed. Remove the // in front of a block and paste the
