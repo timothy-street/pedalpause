@@ -127,20 +127,6 @@
       "checked": "2026-10-22"
     },
     {
-      "id": "books-beyond-2026-10-29",
-      "title": "Books & Beyond Book Club",
-      "town": "Tarpon Springs",
-      "type": "Book club",
-      "start": "2026-10-29T12:00",
-      "end": "2026-10-29T13:30",
-      "venue": "Tarpon Springs Public Library",
-      "address": "138 E Lemon St, Tarpon Springs, FL 34689",
-      "cost": "Free",
-      "summary": "This month's book is Shelter in Place by Nora Roberts.",
-      "link": "https://exploretarponsprings.com/event/books-beyond-book-club-4/",
-      "checked": "2026-10-27"
-    },
-    {
       "id": "show-car-soiree-2026-10-30",
       "title": "Show Car Soirée: Trunk or Treat at Fenway",
       "town": "Dunedin",
