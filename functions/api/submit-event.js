@@ -47,7 +47,8 @@ export async function onRequestPost({ request, env }) {
   const missing = REQUIRED.filter((k) => !entry[k]);
   if (missing.length) return reply(400, { error: 'Please fill in the required boxes.' });
   if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.date)) return reply(400, { error: 'Please check the date.' });
-  if (!/^https?:\/\//i.test(entry.link)) return reply(400, { error: 'The link should start with http:// or https://' });
+  if (!/^https?:\/\//i.test(entry.link)) entry.link = 'https://' + entry.link.replace(/^\/+/, '');
+  if (!/^https?:\/\/[^\s\/]+\.[^\s]+/i.test(entry.link)) return reply(400, { error: 'The link should be a web address, like www.example.com' });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(entry.email)) return reply(400, { error: 'Please check your email address.' });
 
   if (!env.EVENT_SUBMISSIONS) {
