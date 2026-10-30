@@ -11,8 +11,22 @@
     status.className = 'form-status ' + (kind || '');
   }
 
+  // Clear the red highlight as soon as someone edits a flagged box
+  form.addEventListener('input', function (e) {
+    if (e.target.getAttribute('aria-invalid')) e.target.removeAttribute('aria-invalid');
+    if (e.target.name === 'link') e.target.setCustomValidity('');
+  });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    // Accept links typed without http:// (www.example.com) by adding https://
+    var link = form.elements.link;
+    if (link) {
+      var v = link.value.trim();
+      if (v && !/^https?:\/\//i.test(v)) v = 'https://' + v.replace(/^\/+/, '');
+      link.value = v;
+      link.setCustomValidity(v && !/^https?:\/\/[^\s\/]+\.[^\s]+/i.test(v) ? 'Enter a web address, like www.example.com' : '');
+    }
     var bad = Array.prototype.filter.call(form.elements, function (el) {
       el.removeAttribute('aria-invalid');
       return el.willValidate && !el.checkValidity();

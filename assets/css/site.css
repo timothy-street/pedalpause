@@ -456,6 +456,12 @@ a:hover { color: var(--coral); }
 .event-form input:focus, .event-form select:focus, .event-form textarea:focus { border-color: var(--teal); outline: none; }
 .event-form [aria-invalid="true"] { border-color: var(--coral); background: #fff6f2; }
 .form-row { display: grid; gap: 0 14px; grid-template-columns: 1fr; }
+.form-row > div { min-width: 0; }
+/* iPhone Safari draws date/time boxes wider than other fields; keep them in line */
+.event-form input[type="date"], .event-form input[type="time"] {
+  -webkit-appearance: none; appearance: none; display: block; min-width: 0; max-width: 100%; text-align: left;
+}
+.event-form input::-webkit-date-and-time-value { text-align: left; }
 @media (min-width: 560px) { .form-row { grid-template-columns: 1.4fr 1fr 1fr; } }
 .req { font-weight: 600; font-size: 0.85rem; color: var(--coral); margin-left: 6px; }
 .hint { font-size: 0.98rem !important; color: var(--ink-soft); margin: 6px 0 0 !important; }
