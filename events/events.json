@@ -1,6 +1,6 @@
 {
   "region": "Pinellas Trail: Clearwater to Tarpon Springs",
-  "updated": "2026-10-28",
+  "updated": "2026-10-31",
   "events": [
     {
       "id": "palm-harbor-market-2026-10-30",
@@ -120,11 +120,27 @@
       "repeat": "weekly",
       "until": "2027-06-26",
       "venue": "John L. Lawrence Pioneer Park",
-      "address": "Main St, Dunedin, FL",
+      "address": "420 Main St, Dunedin, FL 34698",
       "cost": "Free",
-      "summary": "Saturday market in downtown Dunedin. From November through June it sets up in Pioneer Park on Main Street.",
+      "summary": "Main season market in downtown Dunedin, Fridays and Saturdays from November through June in Pioneer Park on Main Street. A good ride-to stop on the Pinellas Trail.",
       "link": "https://www.visitstpeteclearwater.com/event/dunedin-downtown-market-saturdays/54881",
-      "checked": "2026-10-22"
+      "checked": "2026-10-31"
+    },
+    {
+      "id": "dunedin-downtown-market-fridays",
+      "title": "Dunedin Downtown Market",
+      "town": "Dunedin",
+      "type": "Market",
+      "start": "2026-11-06T09:00",
+      "end": "2026-11-06T14:00",
+      "repeat": "weekly",
+      "until": "2027-06-25",
+      "venue": "John L. Lawrence Pioneer Park",
+      "address": "420 Main St, Dunedin, FL 34698",
+      "cost": "Free",
+      "summary": "Main season market in downtown Dunedin, Fridays and Saturdays from November through June in Pioneer Park on Main Street. This is the Friday listing. A good ride-to stop on the Pinellas Trail.",
+      "link": "https://www.tampabaymarkets.com/dunedin-downtown-market",
+      "checked": "2026-10-31"
     },
     {
       "id": "show-car-soiree-2026-10-30",
