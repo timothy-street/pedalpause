@@ -1,6 +1,6 @@
 {
   "region": "Pinellas Trail: Clearwater to Tarpon Springs",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "events": [
     {
       "id": "palm-harbor-market-2026-10-30",
@@ -55,10 +55,10 @@
       ],
       "venue": "Tarpon Springs Sponge Docks",
       "address": "Dodecanese Blvd & Hill St, Tarpon Springs, FL",
-      "cost": "Check the organizer's site",
+      "cost": "Free",
       "summary": "Two-day seafood, arts and crafts festival at the Sponge Docks. Saturday runs late; Sunday wraps up at 5.",
       "link": "https://sikpromotions.com/applicants/fall/tarpon-springs-seafood-festival",
-      "checked": "2026-10-22"
+      "checked": "2026-10-30"
     },
     {
       "id": "wine-around-palm-harbor-2026",
@@ -70,9 +70,9 @@
       "venue": "Palm Harbor Museum",
       "address": "2043 Curlew Rd, Palm Harbor, FL",
       "cost": "$45",
-      "summary": "Outdoor wine and food tasting on the museum grounds, with a table for each of seven historic local communities. Benefits the museum.",
+      "summary": "Outdoor wine and food tasting on the museum grounds, with a table for each of seven historic local communities. Benefits the museum. Sold out — email the museum to ask about availability.",
       "link": "https://www.palmharbormuseum.com/wine-around-palm-harbor.html",
-      "checked": "2026-10-22"
+      "checked": "2026-10-30"
     },
     {
       "id": "dunedin-celtic-festival-2026",
