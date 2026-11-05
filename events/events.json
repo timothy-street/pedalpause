@@ -1,21 +1,7 @@
 {
   "region": "Pinellas Trail: Clearwater to Tarpon Springs",
-  "updated": "2026-11-01",
+  "updated": "2026-11-05",
   "events": [
-    {
-      "id": "palm-harbor-market-2026-10-30",
-      "title": "Downtown Community Market, Halloween edition",
-      "town": "Palm Harbor",
-      "type": "Market",
-      "start": "2026-10-30T16:00",
-      "end": "2026-10-30T20:00",
-      "venue": "Pop Stansell Park",
-      "address": "797 Florida Ave, Palm Harbor, FL",
-      "cost": "Free",
-      "summary": "Evening market in downtown Palm Harbor, moved from Oct. 17 because of weather. Costume contests start at 6 p.m.",
-      "link": "https://palmharborhappenings.com/events/downtown-community-market-palm-harbor-8/",
-      "checked": "2026-10-22"
-    },
     {
       "id": "tarpon-first-friday",
       "title": "Tarpon Springs First Friday",
@@ -141,34 +127,6 @@
       "summary": "Main season market in downtown Dunedin, Fridays and Saturdays from November through June in Pioneer Park on Main Street. This is the Friday listing. A good ride-to stop on the Pinellas Trail.",
       "link": "https://www.tampabaymarkets.com/dunedin-downtown-market",
       "checked": "2026-10-31"
-    },
-    {
-      "id": "show-car-soiree-2026-10-30",
-      "title": "Show Car Soirée: Trunk or Treat at Fenway",
-      "town": "Dunedin",
-      "type": "Family event",
-      "start": "2026-10-30T18:00",
-      "end": "2026-10-30T21:00",
-      "venue": "Fenway Hotel, Front Lawn",
-      "address": "453 Edgewater Drive, Dunedin, FL 34698",
-      "cost": "Free",
-      "summary": "Decorated show cars and trunk-or-treating on the Fenway Front Lawn. Free and open to the public; the hotel asks guests to RSVP. Valet parking is $10, waived with a food or drink purchase at the hotel.",
-      "link": "https://www.fenwayhotel.com/events/2026/show-car-soiree-trunk-or-treat-at-fenway/",
-      "checked": "2026-10-27"
-    },
-    {
-      "id": "dunedin-downtown-market-2026-10-31",
-      "title": "Dunedin Downtown Market",
-      "town": "Dunedin",
-      "type": "Market",
-      "start": "2026-10-31T09:00",
-      "end": "2026-10-31T13:00",
-      "venue": "Dunedin History Museum parking lot",
-      "address": "349 Main St, Dunedin, FL 34698",
-      "cost": "Free",
-      "summary": "Last Saturday of the summer season. A good ride-to stop on the Pinellas Trail in downtown Dunedin.",
-      "link": "https://www.tampabaymarkets.com/dunedin-downtown-market",
-      "checked": "2026-10-27"
     }
   ]
 }
