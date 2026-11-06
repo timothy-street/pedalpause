@@ -1,6 +1,6 @@
 {
   "_readme": "The one source of truth for Pinellas Trail e-bike rules. The FAQ page (index.html in this folder) is generated from this file by scripts/build-rules-page.mjs, and the chat box answers only from this file. Edit here, run the script, commit both. Every rule needs at least one source id and a last_verified date. Use status 'confirmed' only when an official government page says it; use 'reported' when only news coverage says it.",
-  "updated": "2026-10-28",
+  "updated": "2026-11-02",
   "area": "Pinellas Trail (Fred Marquis Pinellas Trail), St. Petersburg to Tarpon Springs",
   "disclaimer": "This is a plain-language summary, not legal advice. Rules change, sometimes without much notice. Check with the agency that manages the stretch you're riding, and obey any posted signs, before you ride.",
   "not_covered": [
@@ -50,63 +50,70 @@
       "publisher": "Pinellas County",
       "url": "https://pinellas.gov/pinellas-county-trail-guide/",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "county_courtesy": {
       "title": "Pinellas Trail Courtesy",
       "publisher": "Pinellas County",
       "url": "https://pinellas.gov/pinellas-trail-courtesy/",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "pcso_dunedin": {
       "title": "E-Bikes on the Pinellas Trail: What You Need to Know (contributed by the Pinellas County Sheriff's Office, March 25, 2026)",
       "publisher": "City of Dunedin",
       "url": "https://www.dunedin.gov/Your-Government/Learn-and-Engage/Dunedin-insights/City-Information-Resources/E-Bikes-on-the-Pinellas-Trail-What-You-Need-to-Know",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
+    },
+    "fs_316_003": {
+      "title": "Florida Statutes § 316.003(23), Definition of electric bicycle",
+      "publisher": "The Florida Legislature",
+      "url": "https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399%2F0316%2FSections%2F0316.003.html",
+      "kind": "official",
+      "checked": "2026-11-02"
     },
     "fs_316_20655": {
       "title": "Florida Statutes § 316.20655, Electric bicycle regulations",
       "publisher": "The Florida Senate",
       "url": "https://flsenate.gov/Laws/Statutes/2025/316.20655",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "fs_316_2065": {
       "title": "Florida Statutes § 316.2065, Bicycle regulations",
       "publisher": "The Florida Senate",
       "url": "https://flsenate.gov/Laws/Statutes/2025/0316.2065",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "fs_316_008": {
       "title": "Florida Statutes § 316.008, Powers of local authorities",
       "publisher": "The Florida Senate",
       "url": "https://flsenate.gov/Laws/Statutes/2025/316.008",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "stpete_trails": {
       "title": "Cycling & Walking Trails",
       "publisher": "City of St. Petersburg",
       "url": "https://www.stpete.org/residents/parks___recreation/cycling_walking_trails.php",
       "kind": "official",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "beacons_sep2": {
       "title": "Pinellas has few rules for e-bikes. Could that soon change? (Sept. 2, 2026)",
       "publisher": "Tampa Bay Beacons",
       "url": "https://www.tampabaybeacons.com/2026/09/02/pinellas-has-few-rules-for-e-bikes-could-that-soon-change/",
       "kind": "news",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "beacons_oct16": {
       "title": "Pinellas to wait on Tallahassee before writing e-bike rules (Oct. 2026)",
       "publisher": "Tampa Bay Beacons",
       "url": "https://www.tampabaybeacons.com/2026/10/16/pinellas-to-wait-on-tallahassee-before-writing-e-bike-rules/",
       "kind": "news",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     },
     "wusf_aug22": {
       "title": "Pinellas County commissioners explore local e-bike regulations (Aug. 22, 2026)",
@@ -134,7 +141,7 @@
       "publisher": "Florida Rambler",
       "url": "https://www.floridarambler.com/florida-bike-hike-trails/pinellas-trail/",
       "kind": "guide",
-      "checked": "2026-10-28"
+      "checked": "2026-11-02"
     }
   },
   "topics": [
@@ -147,7 +154,7 @@
         "county_trail_guide"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "classes",
@@ -158,7 +165,7 @@
         "pcso_dunedin"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "throttle",
@@ -168,29 +175,31 @@
         "county_trail_guide"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "not_an_ebike",
       "question": "What makes a bike too powerful for the trail?",
-      "answer": "Under Florida law an e-bike has working pedals, a seat, two or three wheels and a motor of 750 watts or less. The Sheriff's Office says a legal e-bike tops out at 28 mph under power and has no illegal modifications. A bike that fails any of those tests is treated as a motor vehicle that needs registration and a licensed driver, and it isn't allowed on the trail. If your bike has been 'unlocked' or had its controller swapped, it may no longer qualify.",
+      "answer": "Under Florida law an e-bike has working pedals, a seat, two or three wheels and a motor of less than 750 watts. The Sheriff's Office says a legal e-bike tops out at 28 mph under power and has no illegal modifications. A bike that fails any of those tests is treated as a motor vehicle that needs registration and a licensed driver, and it isn't allowed on the trail. If your bike has been 'unlocked' or had its controller swapped, it may no longer qualify.",
       "sources": [
+        "fs_316_003",
         "fs_316_20655",
         "pcso_dunedin"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "trikes",
       "question": "Are electric trikes allowed on the Pinellas Trail?",
-      "answer": "A three-wheeled e-trike that meets the rest of Florida's e-bike definition (working pedals, a seat, a motor of 750 watts or less) is an e-bike under state law, so the same trail rules apply to it. Keep in mind the county asks riders not to take up more than half the trail.",
+      "answer": "A three-wheeled e-trike that meets the rest of Florida's e-bike definition (working pedals, a seat, a motor of less than 750 watts) is an e-bike under state law, so the same trail rules apply to it. Keep in mind the county asks riders not to take up more than half the trail.",
       "sources": [
+        "fs_316_003",
         "fs_316_20655",
         "county_trail_guide"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "sidewalk",
@@ -204,7 +213,7 @@
         "bn9_tarpon"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28",
+      "last_verified": "2026-11-02",
       "status_note": "The state-law and St. Petersburg parts come from official pages. The county's decision and the Tarpon Springs rule come from news reports."
     },
     {
@@ -219,7 +228,7 @@
         "bn9_tarpon"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28",
+      "last_verified": "2026-11-02",
       "status_note": "The Tarpon Springs walk-zone detail comes from news reports."
     },
     {
@@ -231,7 +240,7 @@
         "county_trail_guide"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "license_id",
@@ -242,7 +251,7 @@
         "beacons_oct16"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28",
+      "last_verified": "2026-11-02",
       "status_note": "The state-law part comes from the statute. What Pinellas cities have adopted comes from news reports."
     },
     {
@@ -255,7 +264,7 @@
         "beacons_oct16"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28",
+      "last_verified": "2026-11-02",
       "status_note": "The state-law part comes from the statute. The county's October 2026 decision comes from news reports."
     },
     {
@@ -267,7 +276,7 @@
         "fs_316_2065"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "etiquette",
@@ -278,7 +287,7 @@
         "county_courtesy"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "changes",
@@ -290,7 +299,7 @@
         "wusf_aug22"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     }
   ],
   "segments": [
@@ -302,7 +311,7 @@
         "county_parks",
         "st_pete"
       ],
-      "speed": "Pinellas Trail: 20 mph. North Bay Trail (city): St. Petersburg posted 10 mph signs in August 2026 and limited riders to under 15 mph; police have said they're focusing on warnings first.",
+      "speed": "Pinellas Trail: 20 mph. North Bay Trail (city): St. Petersburg posted 10 mph signs in August 2026 and barred riding faster than 15 mph; police have said they're focusing on educating riders.",
       "classes": "Class 1, 2 and 3 on the Pinellas Trail.",
       "sidewalks": "St. Petersburg allows bikes on sidewalks except where signs prohibit it. Ride at a walking-friendly pace and yield to pedestrians.",
       "helmet": "Required under 16.",
@@ -315,7 +324,7 @@
         "rambler_pinellas"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "mid-county",
@@ -336,7 +345,7 @@
         "beacons_oct16"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28",
+      "last_verified": "2026-11-02",
       "status_note": "The 'no countywide rule' point comes from news coverage of the county's October 2026 decision."
     },
     {
@@ -358,7 +367,7 @@
         "rambler_pinellas"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     },
     {
       "id": "palm-harbor",
@@ -378,7 +387,7 @@
         "beacons_oct16"
       ],
       "status": "confirmed",
-      "last_verified": "2026-10-28",
+      "last_verified": "2026-11-02",
       "status_note": "The 'no countywide rule' point comes from news coverage of the county's October 2026 decision."
     },
     {
@@ -402,7 +411,7 @@
         "rambler_pinellas"
       ],
       "status": "reported",
-      "last_verified": "2026-10-28"
+      "last_verified": "2026-11-02"
     }
   ]
 }
